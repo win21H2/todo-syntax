@@ -1,3 +1,4 @@
+import { close } from 'fs';
 import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
@@ -48,7 +49,6 @@ export function activate(context: vscode.ExtensionContext) {
 					vscode.window.showInformationMessage(todoTextNEW + " <- on line -> " + todoLine);
 				}
 			}
-
 		}
 
 		vscode.window.withProgress({location: vscode.ProgressLocation.Notification, title: "Getting word and TODO count...", cancellable: true}, () => {
@@ -60,10 +60,10 @@ export function activate(context: vscode.ExtensionContext) {
 		}).then(() => {
 			vscode.window.showInformationMessage('TODO Total Count: ' + countTodo(text));
 			vscode.window.showInformationMessage('TODO Word Count: ' + locateTodos(text));
-			// hide message after 5 seconds
+			// automatically delete the messages
 			setTimeout(() => {
-
-			}, 5000);
+				
+			}, 1000);
 		});
 	});
 

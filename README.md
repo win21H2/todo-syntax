@@ -41,5 +41,6 @@ This extension allows you to configure the below:
 |-------|------|------|
 |Enable/disable command|✅|Major|
 |Create a new file from a command|❌|Minor|
-|Outputting text from a TODO line to a message|❌🦺|Major|
+|Outputting text from a TODO line to a message|❌|Major|
 |Line number and text of a TODO line|✅|Minor|
+|Closing messages after a certain amount of time|❌🦺|Major|
