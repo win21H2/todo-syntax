@@ -1,9 +1,9 @@
 # Change Log
 
-All notable changes to the "todo-syntax" extension will be documented in this file.
+### Quick access index
+>[0.0.1](#[0.01]---2022-10-13)<br>
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release
+### (0.0.1) - 2022-10-13
+#### Added
+- README information
+- LICENSE information
