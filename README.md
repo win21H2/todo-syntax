@@ -1,71 +1,28 @@
-# todo-syntax README
+<p align="center"><img src="images/TODO syntax.png" width="200"></p>
+<h1 align="center">todo-syntax</h1>
+<h1 align="center">This extension is still in development</h1>
 
-This is the README for your extension "todo-syntax". After writing up a brief description, we recommend including the following sections.
+#### Why todo-syntax?
+This extension is a simple and efficient way to highlight and display TODO, FIXME, and WARN syntax in a separate file for a cleaner notes. There are already other extensions that do this, but this extension is not only able to highlight tags, it can also display them in a separate file (which gets automatically created in a new file) which can make it easier for developers to see what needs working on instead of searching through the code to find the tags.
+
+### Quick access index
+>[Features](#features)<br>
+>[Requirements](#requirements)<br>
+>[Extension Settings](#extension-settings)<br>
+>[Known Issues](#known-issues)<br>
+>[Release Notes](#release-notes)
 
 ## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+This extension allows you to configure the below:
+* The colors of the tags
+* If you want to display the tags in a separate file (todo-syntax.js) or not
+* Add in your own tags and colors for those tags
+* Filter out by tag type of file in the todo-syntax.js list
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
 ## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
 ## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
