@@ -11,6 +11,7 @@ This extension is a simple and efficient way to highlight and display TODO, FIXM
 >[Extension Settings](#extension-settings)<br>
 >[Known Issues](#known-issues)<br>
 >[Release Notes](#release-notes)
+>[Roadmap](#roadmap)
 
 ## Features
 This extension allows you to configure the below:
@@ -26,3 +27,18 @@ This extension allows you to configure the below:
 ## Known Issues
 
 ## Release Notes
+
+## Roadmap
+|Icon| Legend |
+|----| ------------|
+|❌ | Not finished|
+|✅ | Finished    |
+|🦺 | Working on  |
+|🔜 | Coming soon |
+|❗ | Urgent      |
+
+|Feature/fix|Status|
+|-------|------|
+|Creating a enable/disable command|✅|
+|Creating a new file from a command|❌|
+|Outputting text from a TODO line to a message|❌🦺|
