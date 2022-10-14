@@ -36,11 +36,10 @@ This extension allows you to configure the below:
 |🦺 | Working on  |
 |🔜 | Coming soon |
 |❗ | Urgent      |
-|🔴 | Major       |
-|🔵 | Minor       |
 
-|Feature/fix|Status|Major<br>minor|
+|Feature/fix|Status|Major<br>Minor|
 |-------|------|------|
-|Enable/disable command|✅|🔴|
-|Create a new file from a command|❌|🔵|
-|Outputting text from a TODO line to a message|❌🦺|🔴|
+|Enable/disable command|✅|Major|
+|Create a new file from a command|❌|Minor|
+|Outputting text from a TODO line to a message|❌🦺|Major|
+|Line number and text of a TODO line|✅|Minor|

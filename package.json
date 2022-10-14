@@ -27,7 +27,7 @@
       },
       {
         "command": "todo-syntax.wordCounter",
-        "title": "Find word count"
+        "title": "Find TODO count"
       }
     ]
   },

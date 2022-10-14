@@ -1,20 +1,6 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
-
-// var SYNTAX_COLORS = {
-// 	// eslint-disable-next-line @typescript-eslint/naming-convention
-// 	"TODO": {
-// 		text: "TODO",
-// 		color: "red"
-// 	}
-// }; 
-
 export function activate(context: vscode.ExtensionContext) {
-	
 	let ENABLE_EXTENSION = vscode.commands.registerCommand('todo-syntax.enableExtension', () => {
 		vscode.window.withProgress({location: vscode.ProgressLocation.Notification, title: "Enabling TODO syntax...", cancellable: true}, () => {
 			return new Promise<void>((resolve) => {
@@ -39,21 +25,30 @@ export function activate(context: vscode.ExtensionContext) {
 		});
 	});
 
-	let WORD_COUNTER = vscode.commands.registerCommand('todo-syntax.wordCounter', () => {
+	let LOCATE_TODO = vscode.commands.registerCommand('todo-syntax.wordCounter', () => {
 		if(vscode.window.activeTextEditor === undefined || vscode.window.activeTextEditor.document === undefined){
+			vscode.window.showErrorMessage('ERROR NO_FILE_OPEN');
 			return;
 		}
 
 		let text = vscode.window.activeTextEditor.document.getText();
-			
-		function countWords(str: string) {
-			return str.trim().split(/\s+/).length;
-		}
 
 		function countTodo(str: string) {
-			// if there is a TODO, change the color of the word to red
-			
 			return str.match(/TODO/g)?.length;	
+		}
+
+		function locateTodos(str: string) {
+			let lines = str.split(/\r?\n/);
+
+			for (let i = 0; i < lines.length; i++) {
+				if (lines[i].includes("TODO")) {
+					var todoText = lines[i];
+					var todoTextNEW = todoText.replace("//", "");
+					var todoLine = i + 1;
+					vscode.window.showInformationMessage(todoTextNEW + " <- on line -> " + todoLine);
+				}
+			}
+
 		}
 
 		vscode.window.withProgress({location: vscode.ProgressLocation.Notification, title: "Getting word and TODO count...", cancellable: true}, () => {
@@ -63,19 +58,19 @@ export function activate(context: vscode.ExtensionContext) {
 				}, 1000);
 			});
 		}).then(() => {
-			vscode.window.showInformationMessage('Word Count: ' + countWords(text));
-			vscode.window.showInformationMessage('TODO Count: ' + countTodo(text));
+			vscode.window.showInformationMessage('TODO Total Count: ' + countTodo(text));
+			vscode.window.showInformationMessage('TODO Word Count: ' + locateTodos(text));
+			// hide message after 5 seconds
+			setTimeout(() => {
+
+			}, 5000);
 		});
 	});
 
-	context.subscriptions.push(ENABLE_EXTENSION, DISABLE_EXTENSION, WORD_COUNTER);
+	context.subscriptions.push(ENABLE_EXTENSION, DISABLE_EXTENSION, LOCATE_TODO);
 }
 
 export function deactivate() {}
-
-/*
-
-*/
 
 /*
 !SAMPLE BUTTON CODE
