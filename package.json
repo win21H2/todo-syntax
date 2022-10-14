@@ -10,14 +10,24 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:todo-syntax.helloWorld"
+    "onCommand:todo-syntax.enableExtension",
+    "onCommand:todo-syntax.disableExtension",
+    "onCommand:todo-syntax.wordCounter"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "todo-syntax.helloWorld",
-        "title": "Hello World"
+        "command": "todo-syntax.enableExtension",
+        "title": "Enable TODO syntax"
+      },
+      {
+        "command": "todo-syntax.disableExtension",
+        "title": "Disable TODO syntax"
+      },
+      {
+        "command": "todo-syntax.wordCounter",
+        "title": "Find word count"
       }
     ]
   },

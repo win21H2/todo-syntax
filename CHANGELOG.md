@@ -7,3 +7,4 @@
 #### Added
 - README information
 - LICENSE information
+- Added ENABLE and DISABLE commands
