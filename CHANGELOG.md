@@ -7,4 +7,4 @@
 #### Added
 - README information
 - LICENSE information
-- Added ENABLE and DISABLE commands
+- Added ENABLE and DISABLE commands as well as TODO commands (shiwing the user which lines TODOs are on)

@@ -46,6 +46,7 @@ export function activate(context: vscode.ExtensionContext) {
 					var todoText = lines[i];
 					var todoTextNEW = todoText.replace("//", "");
 					var todoLine = i + 1;
+
 					vscode.window.showInformationMessage(todoTextNEW + " <- on line -> " + todoLine);
 				}
 			}
@@ -60,10 +61,10 @@ export function activate(context: vscode.ExtensionContext) {
 		}).then(() => {
 			vscode.window.showInformationMessage('TODO Total Count: ' + countTodo(text));
 			vscode.window.showInformationMessage('TODO Word Count: ' + locateTodos(text));
-			// automatically delete the messages
+			
 			setTimeout(() => {
-				
-			}, 1000);
+				vscode.commands.executeCommand('notifications.clearAll');
+			}, 5000);
 		});
 	});
 
