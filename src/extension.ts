@@ -1,4 +1,3 @@
-import { close } from 'fs';
 import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
@@ -61,7 +60,7 @@ export function activate(context: vscode.ExtensionContext) {
 		}).then(() => {
 			vscode.window.showInformationMessage('TODO Total Count: ' + countTodo(text));
 			vscode.window.showInformationMessage('TODO Word Count: ' + locateTodos(text));
-			
+
 			setTimeout(() => {
 				vscode.commands.executeCommand('notifications.clearAll');
 			}, 5000);
