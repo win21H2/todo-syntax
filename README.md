@@ -63,7 +63,7 @@ Head over to the [FEATURE/FIX OVERFLOW](FEATURE-FIX_OVERFLOW.md) file to see a l
 |-------|------|------|
 |Remove highlighting if TODO is not present|❌❗|Major|
 |Creating a separate file when a TODO is typed|❌❗🦺|Major|
-|Stopping the overwriting of the todo file (when there are multiple TODOs)|❌❗🦺|Major|
+|Append TODO data (overwriting data issue)|❌❗🦺|Major|
 |Placing TODO text in a new file|❌🔜|Major|
 |Filtering out by tag type|❌🔜|Major|
 |Filtering out by file type|❌🔜|Major|

@@ -12,7 +12,7 @@
   "activationEvents": [
     "onCommand:todo-syntax.enableExtension",
     "onCommand:todo-syntax.disableExtension",
-    "onCommand:todo-syntax.wordCounter"
+    "onCommand:todo-syntax.locateTodos"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -26,8 +26,8 @@
         "title": "Disable TODO syntax"
       },
       {
-        "command": "todo-syntax.wordCounter",
-        "title": "Find TODO count"
+        "command": "todo-syntax.locateTodos",
+        "title": "Locate TODOs"
       }
     ]
   },
