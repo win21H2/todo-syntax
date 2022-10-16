@@ -2,6 +2,9 @@
 <h1 align="center">todo-syntax</h1>
 <h1 align="center">This extension is still in development</h1>
 
+### Announcements
+If you would like to help contribute to this extension, for now, please create a PR with the code you want to add in. It will be tested locally and if there are no bugs, the PR will be merged and your name will be added to the [contributors list](/contributors/CONTRIBUTORS.md).
+
 #### Why todo-syntax
 This extension is a simple and efficient way to highlight and display `TODO`, `FIXME`, and `WARN` syntax in a separate file for a cleaner notes. There are already other extensions that do this, but this extension can not only highlight tags, but can also display them in a separate file (which gets automatically created when a user types a TODO although can be configured to be turned off) which can make it easier for developers to see what needs working on instead of searching through the code to find the tags.
 
