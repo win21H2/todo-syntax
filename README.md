@@ -47,15 +47,16 @@ Head over to the [CHANGELOG](CHANGELOG.diff) to see the latest changes as well a
 Head over to the [FEATURE/FIX OVERFLOW](FEATURE-FIX_OVERFLOW.md) file to see a larger collection of features and fixes that have been resolved.
 
 |Icon| Legend |
-|----|-------------|
-|❌ | Not finished|
-|🦺 | Working on  |
-|🔜 | Coming soon |
-|❗ | Urgent      |
+|----|-----------------|
+|❌ | Not finished    |
+|🦺 | Working on      |
+|🔜 | Coming soon     |
+|❗ | Urgent          |
+|🔆 | Almost finished |
 
 |Feature/fix|Status|Major<br>Minor|
 |-------|------|------|
-|Highlighting TODO text|❌❗🦺|Major|
+|Remove highlighting if TODO is not present|❌❗🦺|Major|
 |Placing TODO text in a new file|❌🔜|Major|
 |Filtering out by tag type|❌🔜|Major|
 |Filtering out by file type|❌🔜|Major|

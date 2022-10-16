@@ -1,6 +1,22 @@
 import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
+
+	var DEFAULT_TAGS = {
+    	// eslint-disable-next-line @typescript-eslint/naming-convention
+		"TODO:": {
+			text: "TODO:",
+			color: '#d8572a',
+			overviewRulerColor: 'rgba(216,87,42,0.8)'
+		},
+		// eslint-disable-next-line @typescript-eslint/naming-convention
+		"FIXME:": {
+			text: "FIXME:",
+			color: '#f7b538',
+			overviewRulerColor: 'rgba(247,181,56,0.8)'
+		}
+	};
+
 	let ENABLE_EXTENSION = vscode.commands.registerCommand('todo-syntax.enableExtension', () => {
 		vscode.window.withProgress({location: vscode.ProgressLocation.Notification, title: "Enabling TODO syntax...", cancellable: true}, () => {
 			return new Promise<void>((resolve) => {
@@ -47,6 +63,29 @@ export function activate(context: vscode.ExtensionContext) {
 					var todoLine = i + 1;
 
 					vscode.window.showInformationMessage(todoTextNEW + " <- on line -> " + todoLine);
+					
+					vscode.window.activeTextEditor.setDecorations(
+						vscode.window.createTextEditorDecorationType({
+							color: DEFAULT_TAGS["TODO:"].color,
+							overviewRulerColor: DEFAULT_TAGS["TODO:"].overviewRulerColor
+						}),
+						[new vscode.Range(new vscode.Position(i, 0), new vscode.Position(i, lines.length))]
+					);
+				}
+				if (lines[i].includes("FIXME")) {
+					var todoText = lines[i];
+					var todoTextNEW = todoText.replace("//", "");
+					var todoLine = i + 1;
+
+					vscode.window.showInformationMessage(todoTextNEW + " <- on line -> " + todoLine);
+					
+					vscode.window.activeTextEditor.setDecorations(
+						vscode.window.createTextEditorDecorationType({
+							color: DEFAULT_TAGS["FIXME:"].color,
+							overviewRulerColor: DEFAULT_TAGS["FIXME:"].overviewRulerColor
+						}),
+						[new vscode.Range(new vscode.Position(i, 0), new vscode.Position(i, lines.length))]
+					);
 				}
 			}
 		}
