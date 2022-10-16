@@ -3,7 +3,7 @@
 <h1 align="center">This extension is still in development</h1>
 
 #### Why todo-syntax
-This extension is a simple and efficient way to highlight and display `TODO`, `FIXME`, and `WARN` syntax in a separate file for a cleaner notes. There are already other extensions that do this, but this extension is not only able to highlight tags, it can also display them in a separate file (which gets automatically created in a new file) which can make it easier for developers to see what needs working on instead of searching through the code to find the tags.
+This extension is a simple and efficient way to highlight and display `TODO`, `FIXME`, and `WARN` syntax in a separate file for a cleaner notes. There are already other extensions that do this, but this extension can not only highlight tags, but can also display them in a separate file (which gets automatically created when a user types a TODO although can be configured to be turned off) which can make it easier for developers to see what needs working on instead of searching through the code to find the tags.
 
 <details>
 <summary>Quick access index</summary>
@@ -15,7 +15,7 @@ This extension is a simple and efficient way to highlight and display `TODO`, `F
 <a href="#license">License</a>
 </details>
 
-## → Features
+## <kbd>→</kbd> Features
 This extension allows you to configure the below:
 * The colors of the tags
 * If you want to display the tags in a separate file (`todo-syntax.js`) or not
@@ -25,42 +25,44 @@ This extension allows you to configure the below:
 
 [↑ Go to top ↑](#why-todo-syntax)
 
-## → Requirements
+## <kbd>→</kbd> Requirements
 
 [↑ Go to top ↑](#why-todo-syntax)
 
-## → Extension Settings
+## <kbd>→</kbd> Extension Settings
 
 [↑ Go to top ↑](#why-todo-syntax)
 
-## → Known Issues
+## <kbd>→</kbd> Known Issues
+None so far!
 
 [↑ Go to top ↑](#why-todo-syntax)
 
-## → Release Notes
+## <kbd>→</kbd> Release Notes
+Head over to the [CHANGELOG](CHANGELOG.diff) to see the latest changes as well as past changes.
 
 [↑ Go to top ↑](#why-todo-syntax)
 
-## → Roadmap
+## <kbd>→</kbd> Roadmap
+Head over to the [FEATURE/FIX OVERFLOW](FEATURE-FIX_OVERFLOW.md) file to see a larger collection of features and fixes that have been resolved.
+
 |Icon| Legend |
-|----| ------------|
+|----|-------------|
 |❌ | Not finished|
-|✅ | Finished    |
 |🦺 | Working on  |
 |🔜 | Coming soon |
 |❗ | Urgent      |
 
 |Feature/fix|Status|Major<br>Minor|
 |-------|------|------|
-|Enable/disable command|✅|Major|
-|Line number and text of a TODO line|✅|Minor|
-|Closing messages after a certain amount of time|✅|Major|
-|Create a new file from a command|❌|Minor|
-|Outputting text from a TODO line to a message|❌🦺|Major|
+|Highlighting TODO text|❌❗|Major|
+|Placing TODO text in a new file|❌🔜|Major|
+|Filtering out by tag type|❌🔜|Major|
+|Filtering out by file type|❌🔜|Major|
 
 [↑ Go to top ↑](#why-todo-syntax)
 
-## → License
+## <kbd>→</kbd> License
 
 <kbd>
 MIT License

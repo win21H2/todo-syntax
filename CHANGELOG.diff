@@ -1,0 +1,22 @@
+Change Log
+
+(0.0.1) - 2022-10-13
+ADDED
++ README information
++ LICENSE information
++ Added ENABLE and DISABLE commands as well as TODO commands (showing the user which lines TODOs are on etc.)
+
+REMOVED
+- Removed most of the comments in the pre-defined code
+
+(0.0.2) - DATE TBA
+ADDED
++
+REMOVED
+-
+
+(0.0.3) - DATE TBA
+ADDED
++
+REMOVED
+-
