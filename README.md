@@ -55,7 +55,7 @@ Head over to the [FEATURE/FIX OVERFLOW](FEATURE-FIX_OVERFLOW.md) file to see a l
 
 |Feature/fix|Status|Major<br>Minor|
 |-------|------|------|
-|Highlighting TODO text|❌❗|Major|
+|Highlighting TODO text|❌❗🦺|Major|
 |Placing TODO text in a new file|❌🔜|Major|
 |Filtering out by tag type|❌🔜|Major|
 |Filtering out by file type|❌🔜|Major|
