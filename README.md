@@ -26,15 +26,17 @@ This extension allows you to configure the below:
 [↑ Go to top ↑](#why-todo-syntax)
 
 ## <kbd>→</kbd> Requirements
+### None so far!
 
 [↑ Go to top ↑](#why-todo-syntax)
 
 ## <kbd>→</kbd> Extension Settings
+### None so far!
 
 [↑ Go to top ↑](#why-todo-syntax)
 
 ## <kbd>→</kbd> Known Issues
-None so far!
+### None so far!
 
 [↑ Go to top ↑](#why-todo-syntax)
 
@@ -56,7 +58,9 @@ Head over to the [FEATURE/FIX OVERFLOW](FEATURE-FIX_OVERFLOW.md) file to see a l
 
 |Feature/fix|Status|Major<br>Minor|
 |-------|------|------|
-|Remove highlighting if TODO is not present|❌❗🦺|Major|
+|Remove highlighting if TODO is not present|❌❗|Major|
+|Creating a separate file when a TODO is typed|❌❗🦺|Major|
+|Stopping the overwriting of the todo file (when there are multiple TODOs)|❌❗🦺|Major|
 |Placing TODO text in a new file|❌🔜|Major|
 |Filtering out by tag type|❌🔜|Major|
 |Filtering out by file type|❌🔜|Major|

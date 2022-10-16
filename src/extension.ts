@@ -31,7 +31,7 @@ export function activate(context: vscode.ExtensionContext) {
 				}, 2000);
 			});
 		}).then(() => {
-			vscode.window.showInformationMessage('Nothing here yet! Come back later.');
+			vscode.window.showInformationMessage('Extension enabled!');
 			clearNotifications();
 		});
 	});
@@ -44,12 +44,15 @@ export function activate(context: vscode.ExtensionContext) {
 				}, 2000);
 			});
 		}).then(() => {
-			vscode.window.showInformationMessage('Nothing here yet! Come back later.');
+			vscode.window.showInformationMessage('Feature not functional yet!');
 			clearNotifications();
 		});
 	});
 
 	function locateTodos(str: string) {
+		let todoFile = vscode.window.activeTextEditor.document.fileName;
+		const uri = vscode.Uri.file(vscode.workspace.workspaceFolders[0].uri.fsPath + '/todo-syntax.js');
+
 		if(vscode.window.activeTextEditor === undefined || vscode.window.activeTextEditor.document === undefined){
 			vscode.window.showErrorMessage('NO FILE OPEN');
 			return;
@@ -57,19 +60,14 @@ export function activate(context: vscode.ExtensionContext) {
 		let lines = str.split(/\r?\n/);
 		for (let i = 0; i < lines.length; i++) {
 			if (lines[i].includes("TODO")) {
+				//FILE CREATION AND APPLICATION
+				vscode.workspace.fs.writeFile(uri, Buffer.from("//" + todoFile + '\n' + lines[i] + '\n'));
+
+				//DECORATION
 				vscode.window.activeTextEditor.setDecorations(
 					vscode.window.createTextEditorDecorationType({
 						color: DEFAULT_TAGS["TODO:"].color,
 						overviewRulerColor: DEFAULT_TAGS["TODO:"].overviewRulerColor
-					}),
-					[new vscode.Range(new vscode.Position(i, 0), new vscode.Position(i, lines.length))]
-				);
-			}
-			if (lines[i].includes("FIXME")) {
-				vscode.window.activeTextEditor.setDecorations(
-					vscode.window.createTextEditorDecorationType({
-						color: DEFAULT_TAGS["FIXME:"].color,
-						overviewRulerColor: DEFAULT_TAGS["FIXME:"].overviewRulerColor
 					}),
 					[new vscode.Range(new vscode.Position(i, 0), new vscode.Position(i, lines.length))]
 				);
