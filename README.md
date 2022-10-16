@@ -6,13 +6,13 @@
 This extension is a simple and efficient way to highlight and display `TODO`, `FIXME`, and `WARN` syntax in a separate file for a cleaner notes. There are already other extensions that do this, but this extension can not only highlight tags, but can also display them in a separate file (which gets automatically created when a user types a TODO although can be configured to be turned off) which can make it easier for developers to see what needs working on instead of searching through the code to find the tags.
 
 <details>
-<summary>Quick access index</summary>
-<a href="#features">→ Features</a><br>
-<a href="#extension-settings">→ Extension Settings</a><br>
-<a href="#known-issues">→ Known Issues</a><br>
-<a href="#release-notes">→ Release Notes</a><br>
-<a href="#roadmap">→ Roadmap</a>
-<a href="#license">License</a>
+    <summary>Quick access index</summary>
+    <a href="#features">→ Features</a><br>
+    <a href="#extension-settings">→ Extension Settings</a><br>
+    <a href="#known-issues">→ Known Issues</a><br>
+    <a href="#release-notes">→ Release Notes</a><br>
+    <a href="#roadmap">→ Roadmap</a><br>
+    <a href="#license">→ License</a>
 </details>
 
 ## <kbd>→</kbd> Features
